@@ -4,12 +4,12 @@
   font-style: normal;
   src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot');
   src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans'),
-       local('Noto-Sans-regular'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff') format('woff'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans') format('svg');
+	   local('Noto Sans'),
+	   local('Noto-Sans-regular'),
+	   url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2') format('woff2'),
+	   url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff') format('woff'),
+	   url('../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf') format('truetype'),
+	   url('../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans') format('svg');
 }
 
 @font-face {
@@ -18,12 +18,12 @@
   font-style: normal;
   src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot');
   src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold'),
-       local('Noto-Sans-700'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff') format('woff'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans') format('svg');
+	   local('Noto Sans Bold'),
+	   local('Noto-Sans-700'),
+	   url('../fonts/Noto-Sans-700/Noto-Sans-700.woff2') format('woff2'),
+	   url('../fonts/Noto-Sans-700/Noto-Sans-700.woff') format('woff'),
+	   url('../fonts/Noto-Sans-700/Noto-Sans-700.ttf') format('truetype'),
+	   url('../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans') format('svg');
 }
 
 @font-face {
@@ -32,12 +32,12 @@
   font-style: italic;
   src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot');
   src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Italic'),
-       local('Noto-Sans-italic'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans') format('svg');
+	   local('Noto Sans Italic'),
+	   local('Noto-Sans-italic'),
+	   url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2') format('woff2'),
+	   url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff') format('woff'),
+	   url('../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf') format('truetype'),
+	   url('../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans') format('svg');
 }
 
 @font-face {
@@ -46,16 +46,16 @@
   font-style: italic;
   src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot');
   src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix') format('embedded-opentype'),
-       local('Noto Sans Bold Italic'),
-       local('Noto-Sans-700italic'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2') format('woff2'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff') format('woff'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
-       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
+	   local('Noto Sans Bold Italic'),
+	   local('Noto-Sans-700italic'),
+	   url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2') format('woff2'),
+	   url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff') format('woff'),
+	   url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
+	   url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
 
 body {
-  background-color: #fff;
+  background-color: #E0DBDB;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
@@ -108,8 +108,8 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
-  margin:0 auto;
+  width:1160px;
+  margin:-10 auto;
 }
 
 blockquote {
@@ -224,7 +224,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:800px;
   float:right;
   padding-bottom:50px;
 }
@@ -251,74 +251,78 @@ footer {
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
-    width:auto;
-    margin:0;
+	width:auto;
+	margin:0;
   }
 
   header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
+	float:none;
+	position:static;
+	width:auto;
   }
 
   header {
-    padding-right:320px;
+	padding-right:320px;
   }
 
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+	border:1px solid #e5e5e5;
+	border-width:1px 0;
+	padding:20px 0;
+	margin:0 0 20px;
   }
 
   header a small {
-    display:inline;
+	display:inline;
   }
 
   header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+	position:absolute;
+	right:50px;
+	top:52px;
   }
 }
 
 @media print, screen and (max-width: 720px) {
   body {
-    word-wrap:break-word;
+	word-wrap:break-word;
   }
 
   header {
-    padding:0;
+	padding:0;
   }
 
   header ul, header p.view {
-    position:static;
+	position:static;
   }
 
   pre, code {
-    word-wrap:normal;
+	word-wrap:normal;
   }
 }
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
+	padding:15px;
   }
 
   header ul {
-    width:99%;
+	width:99%;
   }
 
   header li, header ul li + li + li {
-    width:33%;
+	width:33%;
   }
 }
 
 @media print {
   body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
+	padding:0.4in;
+	font-size:12pt;
+	color:#444;
   }
+}
+
+p#class-prof-uni {
+	color:red;
 }
