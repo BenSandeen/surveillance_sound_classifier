@@ -1,0 +1,5 @@
+PyBrain.egg-info/PKG-INFO
+PyBrain.egg-info/SOURCES.txt
+PyBrain.egg-info/dependency_links.txt
+PyBrain.egg-info/requires.txt
+PyBrain.egg-info/top_level.txt
