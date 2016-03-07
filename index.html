@@ -73,17 +73,29 @@
     (as in how quickly a single sound reaches its peak volume), and the MFCCs (Mel frequency Cepstral Coefficients).
 </p>
 <p>
-    Here are several <a href="https://en.wikipedia.org/wiki/Harmonic_pitch_class_profiles">chromagrams</a> generated from each of
+    Below are several <a href="https://en.wikipedia.org/wiki/Harmonic_pitch_class_profiles">chromagrams</a> generated from each of
     our different sound source types (bangs and other manmade/artificial sounds, screams, singing, and birds/other natural
     sounds).  Each row consists of five randomly-selected sound files from the same category.
 </p>
 <img src="./chromagram.png" style="width:775px"/>
 <p>
-    Here are several MFCCs (<a href="https://en.wikipedia.org/wiki/Mel-frequency_cepstrum">Mel Frequency Cepstral Coefficients</a>),
+    Below are several MFCCs (<a href="https://en.wikipedia.org/wiki/Mel-frequency_cepstrum">Mel Frequency Cepstral Coefficients</a>),
     generated analogously to the chromagrams.  Note that the plots in the corresponding positions between the chromagrams and
     MFCCs are most likely NOT plots of the same sound file.
 </p>
           <img src="./MFCC.png" style="width:775px"/>
+
+<p>
+    We also hope to be able to incorporate <a href="https://en.wikipedia.org/wiki/Dynamic_range_compression#Attack_and_release">
+    attack</a>, or rapidity of onset, of sounds across these different sources.  Below is another wall of plots displaying the
+    attack of randomly selected sounds.
+</p>
+          <img src="./Attack.png" style="width:775px"/>
+
+<p>
+    We will be using these features, and likely a few more, to perform train a machine learning system to recognize and differentiate
+    between all these sounds.
+</p>
 <!--
 
 <h3>
