@@ -87,14 +87,19 @@
 
 <p>
     We also hope to be able to incorporate <a href="https://en.wikipedia.org/wiki/Dynamic_range_compression#Attack_and_release">
-    attack</a>, or rapidity of onset, of sounds across these different sources.  Below is another wall of plots displaying the
+    attack</a>, or rapidity of onset, of sounds across these different sources.  Note that the attack is effectively how steep the
+    initial incline of the blue area is.  A high slope indicates a sound that that very rapidly reached its peak loudness.  A good
+    example of such a sound is a percussionist hitting a drum.  As our preliminary results clearly show, our category "bangs and
+    other manmade sounds" consists largely of sounds with a very rapid attack.  Below is another wall of plots displaying the
     attack of randomly selected sounds.
 </p>
           <img src="./Attack.png" style="width:775px"/>
 
 <p>
     Another feature, which looks promising for descrying human voices from non-human sounds, is the
-    <a href="https://en.wikipedia.org/wiki/Autocorrelation">autocorrelation</a>.
+    <a href="https://en.wikipedia.org/wiki/Autocorrelation">autocorrelation</a>.  This measures the self-similarity over many
+    time-delays.  A sound that is quite self-similar over time will tend to have a higher autocorrelation (in our plots this means
+    there will be more blue area) than sounds that change rapidly over time, without much repeating, such as a drum being hit.
 </p>
           <img src="./Autocorrelation.png" style="width:775px" />
           <br><br />
