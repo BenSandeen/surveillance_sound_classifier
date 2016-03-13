@@ -83,3 +83,6 @@ ENV/
 
 # Spyder project settings
 .spyderproject
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
