@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 
+def milliseconds2samples(numMilli, samplerate):
+    return int(numMilli * float(samplerate) / 1000)
+
 def getSegments(musicArray, windowSize):
     if windowSize % 2:
         raise ArithmeticError('windowSize cannot be odd')
@@ -24,3 +27,8 @@ def getSegments(musicArray, windowSize):
             end = musicLength
         segments[hop] = musicArray[start:end]
     return np.array(segments)
+    
+def getSegmentsByTime(musicArray, samplerate, segmentLengthMilli):
+    windowSize = milliseconds2samples(segmentLengthMilli, samplerate)
+    return getSegments(musicArray, windowSize)
+    
