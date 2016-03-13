@@ -53,3 +53,14 @@ def test_getSegmentsByTime():
         assert len(segment) == expectedSampleLength
     else:
         assert entered
+    
+    my_sounds = sfm.getToySounds()
+    
+    try:
+        for sound_key in my_sounds:
+            for soundSRTuple in my_sounds[sound_key]:
+                sfm.getSegmentsByTime(soundSRTuple[0],soundSRTuple[1],500)
+    except Exception as e:
+        print e
+        pytest.fail("Test failed while testing real life sounds")
+    
