@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
+import screamDetectorHelper as sdh
 
 def milliseconds2samples(numMilli, samplerate):
     return int(numMilli * float(samplerate) / 1000)
@@ -31,4 +32,13 @@ def getSegments(musicArray, windowSize):
 def getSegmentsByTime(musicArray, samplerate, segmentLengthMilli):
     windowSize = milliseconds2samples(segmentLengthMilli, samplerate)
     return getSegments(musicArray, windowSize)
-    
+
+
+def filterSilenceOut(segmentedSounds):
+    filteredSegments = []
+    for segment in segmentedSounds:
+        if not sdh.isSilence(segment):
+            filteredSegments.append(segment)
+    return filteredSegments
+        
+        
