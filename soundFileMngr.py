@@ -28,3 +28,21 @@ def getToySounds():
         my_sounds = loadAndPickleFiles()
     
     return my_sounds
+
+def getSounds():
+    #TODO: Implement
+    pass
+
+def getInClassifiedSoundsArrayFromFile(useToyDict=False):
+    soundDict = None
+    if useToyDict:
+        soundDict = getToySounds()
+    else:
+        soundDict = getSounds()
+    
+    screams = soundDict["Screams"]
+    notScreams = []
+    for soundKey in soundDict:
+        if soundKey != "Screams":
+            notScreams.extend(soundDict[soundKey][0])
+    return {1: screams, 0: notScreams}
