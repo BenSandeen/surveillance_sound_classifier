@@ -10,6 +10,11 @@ segmentSize = samplerate * timeForSubSegment / 1000
 
 def make_extender(n):
     return lambda x: n.extend(x.flatten())
+def list_extender(n):
+    return lambda x: n.extend(x)
+
+def getLabels(name, mat):
+    return [name + " - " + str(i) for i in range(len(mat.flatten()))]
 
 def featurify(soundSegment):
     # should be vector of dimensions 20x1
@@ -35,22 +40,32 @@ def featurify(soundSegment):
     chroma_avg = np.mean(chroma,axis=0)    
     
     attack = librosa.feature.delta(soundSegment)#,order=2)
+    
     features = []
+    featuresNames = []
     extend_features = make_extender(features)
+    extend_names = list_extender(featuresNames)
+    
     extend_features(mfcc)
+    extend_names(getLabels('mfcc', mfcc))
     extend_features(pre_attack)
+    extend_names(getLabels('pre_attack', pre_attack ))
     extend_features(spectral_centroid)
+    extend_names(getLabels('spectral_centroid', spectral_centroid))
     extend_features(chroma)
+    extend_names(getLabels('chroma',chroma ))
     extend_features(chroma_avg)
+    extend_names(getLabels('chroma_avg', chroma_avg))
     extend_features(chroma_std)
-    return np.array(features, dtype=np.float32)
+    extend_names(getLabels('chroma_std', chroma_std))
+    return np.array(features, dtype=np.float32), featuresNames
 
 def getInstancesFeatures(instances):
     instancesFeatures = []
     for instance in instances:
-        features = featurify(instance)
+        features, featureNames = featurify(instance)
         instancesFeatures.append(features)
-    return np.array(instancesFeatures, dtype=np.float32)
+    return np.array(instancesFeatures, dtype=np.float32), featureNames
 
 def getSoundsFromTupleList(sound_sr_tuple_list):
     return list(zip(*sound_sr_tuple_list)[0])
