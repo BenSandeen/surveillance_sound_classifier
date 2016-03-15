@@ -30,5 +30,10 @@ def getToySounds():
     return my_sounds
 
 def getSounds():
-    #TODO: Implement
-    pass
+    try:
+        with open('my_sounds.pkl','rb') as infile:
+            my_sounds = cPickle.load(infile)
+    except:
+        my_sounds = loadAndPickleFiles()
+    
+    return my_sounds
