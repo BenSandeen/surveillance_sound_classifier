@@ -10,20 +10,22 @@ def test_featurify():
 
     instancesFeatures = []
     for instance in instances:
-        features = mlh.featurify(instance)
+        features, featuresNames = mlh.featurify(instance)
         assert features.dtype == 'float32'
         assert all(not isinstance(feature, list) for feature in features)
         instancesFeatures.append(features)
+        lenFeatures = len(features)
+        assert lenFeatures == len(featuresNames)
     
 def test_getFeatures():
     instances, classifications = mlh.getLearningArrays(useToySounds=True)    
-    instancesFeatures = mlh.getInstancesFeatures(instances)
+    instancesFeatures, featuresLabels = mlh.getInstancesFeatures(instances)
 
-    assert instancesFeatures.dtype == 'float32'    
-    
-    lenFeatures = len(instancesFeatures[0])
+    assert instancesFeatures.dtype == 'float32'
     
     assert len(instancesFeatures) == len(instances)
+    
+    lenFeatures = len(instancesFeatures[0])
     for instanceFeatures in instancesFeatures:
         assert lenFeatures == len(instanceFeatures)    
     
