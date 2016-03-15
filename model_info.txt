@@ -1,0 +1,45 @@
+Done with screams. We have  11810 instances of screams.
+Doing soundKey =  Bangs and other manmade sounds
+There are more sounds than the limit
+Doing soundKey =  Singing
+There are more sounds than the limit
+Doing soundKey =  Birds
+There are more sounds than the limit
+Done with non screams. We have  11808 instances of no screams.
+
+model models/dTree_5_0.05_ got average:  0.823359683098  and stdv:  0.0681965391095
+model models/dTree_5_0.01_ got average:  0.823359683098  and stdv:  0.0681965391095
+model models/dTree_5_0.1_ got average:  0.823359683098  and stdv:  0.0681965391095
+model models/dTree_5_0.15_ got average:  0.823359683098  and stdv:  0.0681965391095
+model models/dTree_7_0.01_ got average:  0.814426194839  and stdv:  0.0648673855571
+model models/dTree_7_0.05_ got average:  0.814426194839  and stdv:  0.0648673855571
+model models/dTree_7_0.1_ got average:  0.814426194839  and stdv:  0.0648673855571
+model models/dTree_7_0.15_ got average:  0.814426194839  and stdv:  0.0648673855571
+model models/dTree_10_0.1_ got average:  0.817262700766  and stdv:  0.061533097956
+model models/dTree_10_0.05_ got average:  0.817262700766  and stdv:  0.061533097956
+model models/dTree_10_0.01_ got average:  0.817262700766  and stdv:  0.061533097956
+model models/dTree_10_0.15_ got average:  0.817262700766  and stdv:  0.061533097956
+model models/dTree_15_0.05_ got average:  0.805321663471  and stdv:  0.0611666983137
+model models/dTree_15_0.15_ got average:  0.805321663471  and stdv:  0.0611666983137
+model models/dTree_15_0.01_ got average:  0.805321663471  and stdv:  0.0611666983137
+model models/dTree_15_0.1_ got average:  0.805321663471  and stdv:  0.0611666983137
+
+
+
+[array([ 0.82074074,  0.86899822,  0.86899822,  0.70687611,  0.76970954,
+        0.7984588 ,  0.92973614]), array([ 0.82074074,  0.86899822,  0.86899822,  0.70687611,  0.76970954,
+        0.7984588 ,  0.92973614]), array([ 0.82074074,  0.86899822,  0.86899822,  0.70687611,  0.76970954,
+        0.7984588 ,  0.92973614]), array([ 0.82074074,  0.86899822,  0.86899822,  0.70687611,  0.76970954,
+        0.7984588 ,  0.92973614]), array([ 0.78725926,  0.87166568,  0.8488441 ,  0.72139893,  0.73117961,
+        0.83550682,  0.90512897]), array([ 0.78725926,  0.87166568,  0.8488441 ,  0.72139893,  0.73117961,
+        0.83550682,  0.90512897]), array([ 0.78725926,  0.87166568,  0.8488441 ,  0.72139893,  0.73117961,
+        0.83550682,  0.90512897]), array([ 0.78725926,  0.87166568,  0.8488441 ,  0.72139893,  0.73117961,
+        0.83550682,  0.90512897]), array([ 0.80207407,  0.87225845,  0.84054535,  0.73206876,  0.73770006,
+        0.82365145,  0.91254076]), array([ 0.80207407,  0.87225845,  0.84054535,  0.73206876,  0.73770006,
+        0.82365145,  0.91254076]), array([ 0.80207407,  0.87225845,  0.84054535,  0.73206876,  0.73770006,
+        0.82365145,  0.91254076]), array([ 0.80207407,  0.87225845,  0.84054535,  0.73206876,  0.73770006,
+        0.82365145,  0.91254076]), array([ 0.80622222,  0.85240071,  0.83195021,  0.74599881,  0.6959099 ,
+        0.8114997 ,  0.89327009]), array([ 0.80622222,  0.85240071,  0.83195021,  0.74599881,  0.6959099 ,
+        0.8114997 ,  0.89327009]), array([ 0.80622222,  0.85240071,  0.83195021,  0.74599881,  0.6959099 ,
+        0.8114997 ,  0.89327009]), array([ 0.80622222,  0.85240071,  0.83195021,  0.74599881,  0.6959099 ,
+        0.8114997 ,  0.89327009])]
