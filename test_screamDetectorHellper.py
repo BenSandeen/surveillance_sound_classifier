@@ -15,3 +15,4 @@ def test_isSilence():
 
     for segment in segmentedScream:
         assert not sdh.isSilence(segment)
+     
