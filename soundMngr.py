@@ -7,6 +7,7 @@ def milliseconds2samples(numMilli, samplerate):
 
 def getSegments(musicArray, windowSize):
     if windowSize % 2:
+        print "window size = ", windowSize
         raise ArithmeticError('windowSize cannot be odd')
 
     musicLength = len(musicArray)
@@ -16,6 +17,8 @@ def getSegments(musicArray, windowSize):
     length_to_cover_with_hops = musicLength - windowSize;
     
     if length_to_cover_with_hops < 0:
+        print "Music length: ", musicLength, " windowSize: ", windowSize
+        print musicArray
         raise ArithmeticError("window_size cannot be longer than the signal to be windowed")
         
     num_hops = 1 + length_to_cover_with_hops/hopSize;    
