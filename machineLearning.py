@@ -7,7 +7,7 @@ instances, classifications = mlh.getLearningArrays(useToySounds=True)
 
 
 
-instancesFeatures = mlh.getInstancesFeatures(instances)
+instancesFeatures, featureNames = mlh.getInstancesFeatures(instances)
 classifications = np.array(classifications)
 
 print "Instance features type ", instancesFeatures.dtype
@@ -15,4 +15,4 @@ print "classifications type ", classifications.dtype
 
 dTree = dTreeClassifier()
 dTree = dTree.fit(instancesFeatures, classifications)
-eGraph(dTree, out_file='dTree.dot')
+eGraph(dTree, out_file='dTree1.dot', feature_names=featureNames)
