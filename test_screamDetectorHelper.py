@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""
 import screamDetectorHelper as sdh
 import soundFileMngr as sfm
 import librosa
@@ -15,4 +16,4 @@ def test_isSilence():
 
     for segment in segmentedScream:
         assert not sdh.isSilence(segment)
-     
+"""
