@@ -6,6 +6,7 @@ import machineLearningHelper as mlh
 import screamDetectorHelper as sdh
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
 
 with open("models/pickle_files/dTree_5_0.15_.pkl", 'rb') as inModel:
     model = pickle.load(inModel)
@@ -34,26 +35,38 @@ def getProbability(segment):
     
     return float(sum(classifications))/len(classifications)
     
-def plotProbabilities(screamProbabilities):
+def plotProbabilities(screamProbabilities, soundfile):
     pos_data = screamProbabilities
     neg_data = screamProbabilities - 1
-    x = len(pos_data)
+    x = np.arange(len(pos_data)) * barTimeLength
     fig = plt.figure()
+    fig.suptitle('Probability of screams for \n' + soundfile, fontsize=14)
     ax = plt.subplot(111)
+    ax.set_ylabel('Probability (+Screams, -NotScreams)')
+    ax.set_xlabel('Time (ms)')
+    ax.set_ylim([-1,1])
     ax.bar(x, neg_data, width=1, color='r')
     ax.bar(x, pos_data, width=1, color='b')
-    plt.show()
 
 def analyzeSoundFile(soundfile):
     sound, sr = librosa.load(soundfile, sr = samplerate)
     
     screamProbabilities = getScreamProbabilities(sound, samplerate, barTimeLength)
-    print screamProbabilities
-    #TODO: plot(screamProbabilities)
+    plotProbabilities(screamProbabilities, soundfile)
 
 def test_sounds():
     analyzeSoundFile('test_sounds/Scream+21_wav_Output_83.wav')
     analyzeSoundFile('test_sounds/125127__thanvannispen__schreeuw1clean_wav_Output_15.wav')
     analyzeSoundFile('test_sounds/31581__dobroide__20070224-swallows_wav_Output_3.wav')
     analyzeSoundFile('test_sounds/243613__patricklieberkind__big-crash_wav_Output_57.wav')
-test_sounds()
+
+def main(argv):
+    if argv: #did give a file
+        print 'doing given file'
+        analyzeSoundFile(argv[0])
+    else:
+        print 'doing test sounds'
+        test_sounds()
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
