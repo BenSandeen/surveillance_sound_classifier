@@ -16,6 +16,7 @@ def test_featurify():
         instancesFeatures.append(features)
         lenFeatures = len(features)
         assert lenFeatures == len(featuresNames)
+        assert lenFeatures == 36
     
 def test_getFeatures():
     instances, classifications = mlh.getLearningArrays(useToySounds=True)    

@@ -6,7 +6,7 @@ import numpy as np
 
 timeForSubSegment = 40 #in milliseconds
 samplerate = 44100
-segmentSize = samplerate * timeForSubSegment / 1000
+segmentSize = (samplerate * timeForSubSegment / 1000) + 1
 
 def make_extender(n):
     return lambda x: n.extend(x.flatten())
@@ -58,6 +58,7 @@ def featurify(soundSegment):
     extend_names(getLabels('chroma_avg', chroma_avg))
     extend_features(chroma_std)
     extend_names(getLabels('chroma_std', chroma_std))
+    
     return np.array(features, dtype=np.float32), featuresNames
 
 def getInstancesFeatures(instances):
