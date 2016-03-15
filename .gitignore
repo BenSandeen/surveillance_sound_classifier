@@ -86,3 +86,6 @@ ENV/
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+# ignore large file
+my_sounds.pkl
