@@ -55,10 +55,10 @@ def analyzeSoundFile(soundfile):
     plotProbabilities(screamProbabilities, soundfile)
 
 def test_sounds():
-    analyzeSoundFile('test_sounds/Scream+21_wav_Output_83.wav')
-    analyzeSoundFile('test_sounds/125127__thanvannispen__schreeuw1clean_wav_Output_15.wav')
-    analyzeSoundFile('test_sounds/31581__dobroide__20070224-swallows_wav_Output_3.wav')
-    analyzeSoundFile('test_sounds/243613__patricklieberkind__big-crash_wav_Output_57.wav')
+    analyzeSoundFile('test_sounds/rattle.wav')
+    analyzeSoundFile('test_sounds/nature.wav')
+    analyzeSoundFile('test_sounds/all_scream.wav')
+    analyzeSoundFile('test_sounds/scream_with_silence.wav')
 
 def main(argv):
     if argv: #did give a file
