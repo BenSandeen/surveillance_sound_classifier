@@ -73,7 +73,7 @@
     (as in how quickly a single sound reaches its peak volume), MFCCs (Mel frequency Cepstral Coefficients), spectral centroid, root mean squared energy, chromagram, anverage chroma value, and standard deviation of chroma values.  The decision tree algorithm is a good fit four our purposes because the algorithm tends to ignore less useful features implicitly.  The result is a system that segments an unknown file, segements it, then gives classfications for each of the segements.  This is good, because a recording may not contain a scream for its full duration, so it is useful classify parts of it.
 </p>
 <p>
-    Audio features were exctracted from of 40 millsecond segments of each recording of a sound with a 20 millisecond hop size (50 percent overlap) at 44100 Hz WAV files (1764 and 882 samples respectively).  The following image is a summary of how our system works.
+    Audio features were exctracted from of 40 millsecond segments of each recording of a sound with a 20 millisecond hop size (50 percent overlap) at 44100 Hz WAV files (1764 and 882 samples respectively). Segments that contained little to no sound were not used to train the classifier. The following image is a summary of how our system works.
 </p>
 <img src="./files/system_graphic_2.png" style"width:775px"/>
 <br/>
@@ -105,14 +105,19 @@
     Another feature, which we did not end up using for four our classifier, is the
     <a href="https://en.wikipedia.org/wiki/Autocorrelation">autocorrelation</a>.  This measures the self-similarity over many
     time-delays.  A sound that is quite self-similar over time will tend to have a higher autocorrelation (in our plots this means
-    there will be more blue area).
+    there will be more blue area).  The closest thing we used to capture this was the root mean square energy of the signal, which is an okay approximation given the short time frame.
 </p>
           <img src="./files/Autocorrelation.png" style="width:775px" />
           <br><br />
           
 <p>
-    The end result
+    We trained our model on 23618 individual segments from about 750 sound files (evenly divided between those that contain screams, and those that do not).  Using 7-fold cross validation, we trained several models of varying max depths and minimum population percentage in a leaf.  Both of those parameters were tweaked to avoid overfitting.  We ultimately chose a model with a max depth of 5 and a minmum population for a leaf of 0.15 ratio of the whole population. The result of its 7-fold cross validation was an average correct classification rate of 0.8135 and a standard deviation of 0.0620.
 </p>
+<p>
+    The following shows an output of our system with an 8 second file containing 4 seconds of scream and then 4 seconds of silence.  Each 40 millisecond time segment is represented on the horizontal axis with the confidence rating of scream versus scream on the vertical axis.
+</p>
+<img src="./files/scream_with_silence.png" style="width:775px" />
+
           </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
